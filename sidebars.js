@@ -206,7 +206,7 @@ const sidebars = {
         },
       ],
     },
-    "glossary",
+    'glossary',
   ],
   restSidebar: [
     {
@@ -222,6 +222,7 @@ const sidebars = {
       href: "https://cdn.emnify.net/api/doc/index.html",
     },
   ],
+  ...require("./docs/graphql/sidebar-schema.js")
 };
 
 module.exports = sidebars;
