@@ -118,9 +118,9 @@ const config = {
       },
       footer: {
         logo: {
-          alt: "",
-          src: "img/logo-icon-only-dark.svg",
-          style: { marginTop: "0.5rem" },
+          alt: '',
+          src: 'img/logo-icon-only-dark.svg',
+          style: { marginTop: '0.5rem' },
         },
         links: [
           {
@@ -188,7 +188,18 @@ const config = {
       prism: {
         theme: lightCodeTheme,
       },
+      zoom: {
+        // selector: '.markdown :not(em) > img',
+        config: {
+          // Options you can specify via https://github.com/francoischalifour/medium-zoom#options
+          background: {
+            light: 'rgb(255, 255, 255)',
+          },
+        },
+      },
     }),
+
+  plugins: [require.resolve('docusaurus-plugin-image-zoom')],
 };
 
 module.exports = config;
