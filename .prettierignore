@@ -15,6 +15,7 @@ yarn.lock
 
 # Production
 build
+.env
 
 # Generated files
 .github/ISSUE_TEMPLATE

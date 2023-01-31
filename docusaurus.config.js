@@ -1,4 +1,6 @@
 // @ts-check
+require("dotenv").config();
+console.log(process.env);
 const lightCodeTheme = require("prism-react-renderer/themes/vsLight");
 
 /** @type {import('@docusaurus/types').Config} */
@@ -199,7 +201,15 @@ const config = {
       },
     }),
 
-  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
+  plugins: [
+    [
+      "docusaurus2-dotenv",
+      {
+        systemvars: true,
+      },
+    ],
+    require.resolve("docusaurus-plugin-image-zoom"),
+  ],
 };
 
 module.exports = config;
