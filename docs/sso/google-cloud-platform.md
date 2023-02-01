@@ -9,11 +9,13 @@ This guide walks through enabling single sign-on (SSO), so your organization can
 **Prerequisites:**
 
 - A Google account that's a user within a [Google Cloud Platform organization](https://cloud.google.com/resource-manager/docs/creating-managing-organization)
-- An account in the emnify Portal using the same email address as the one used to sign into Google 
+- An [emnify Portal account](https://portal.emnify.com/sign/up/) using the same email address as the one used to sign into Google 
 
 :::caution
 If your email address in the emnify Portal differs from the one used to log in to Google, this setup won't work. 
-Instead, add an additional user to the emnify Portal with **Administrator** privileges.
+You can verify your email on the [**User Settings** page](https://portal.emnify.com/user-settings).
+
+Instead, [add an additional user](https://portal.emnify.com/organisation-settings/users) to the emnify Portal with the **Administrator** role.
 :::
 
 ## Register emnify in Google
@@ -57,8 +59,8 @@ You can access your client ID and secret at any time in your Google Cloud Platfo
 
 ## Configure the emnify Portal
 
-1. Log in to the [emnify Portal](https://portal.emnify.com/).
-1. Go to **Organization Settings** (building icon) in the top-level navigation and click **Single Sign-On**.
+1. [Log in to the emnify Portal](https://portal.emnify.com/sign/).
+1. Go to **Organization Settings** (building icon) in the top-level navigation and click [**Single Sign-On**](https://portal.emnify.com/organisation-settings/federation).
 1. If you need SSO enabled for your account, [contact support](https://support.emnify.com/). 
 Otherwise, click **Add** under the Google SSO provider.
 1. Fill in the **Client ID** and **Client Secret** you copied earlier, then click **Create and Activate**.
