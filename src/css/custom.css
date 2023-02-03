@@ -187,3 +187,8 @@ div[title="Expand sidebar"]:hover {
     padding-right: 20px;
   }
 }
+
+/* Active navigation bar links */
+.navbar__link--active {
+  font-weight: bold;
+}
