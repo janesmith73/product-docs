@@ -211,3 +211,8 @@ div[title="Expand sidebar"]:hover {
 .navbar__link--active {
   font-weight: bold;
 }
+
+/* Inline code elements wrapped in an anchor tag */
+a:has(> code) {
+  text-decoration: none;
+}
