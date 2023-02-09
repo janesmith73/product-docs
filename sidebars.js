@@ -1,7 +1,7 @@
 // @ts-ignore
-let apiSidebar;
+let graphqlSidebar;
 try {
-  apiSidebar = require("./docs/graphql/sidebar-schema.js");
+  graphqlSidebar = require("./docs/graphql/sidebar-schema.js");
 } catch (err) {
   console.warn(
     `Warning: Missing sidebar file "./docs/graphql/sidebar-schema.js"`
@@ -231,7 +231,7 @@ const sidebars = {
       href: "https://cdn.emnify.net/api/doc/index.html",
     },
   ],
-  ...apiSidebar,
+  ...graphqlSidebar,
 };
 
 module.exports = sidebars;

@@ -216,3 +216,11 @@ div[title="Expand sidebar"]:hover {
 a:has(> code) {
   text-decoration: none;
 }
+
+/* Preview badge */
+.badge--primary {
+  font-size: 50%;
+  font-weight: 500;
+  margin-bottom: 10px;
+  vertical-align: middle !important;
+}
