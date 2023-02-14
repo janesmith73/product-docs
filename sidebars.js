@@ -206,6 +206,7 @@ const sidebars = {
         },
       ],
     },
+    "integration-guides/index",
     "glossary",
   ],
   restSidebar: [
