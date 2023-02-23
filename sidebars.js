@@ -220,8 +220,8 @@ const sidebars = {
     "rest-api/sms-operations",
     {
       type: "link",
-      label: "API reference",
-      href: "https://cdn.emnify.net/api/doc/index.html",
+      label: "API Reference",
+      href: "/api",
     },
   ],
 };

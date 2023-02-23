@@ -1,6 +1,6 @@
 // @ts-check
 const lightCodeTheme = require("prism-react-renderer/themes/vsLight");
-
+const { ProvidePlugin } = require("webpack");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "emnify Documentation",
@@ -99,7 +99,6 @@ const config = {
           content:
             "Check our documentation for emnify API and Services including Data Streamer, Cloud Connect, Security, SIM management.",
         },
-        {},
       ],
       colorMode: {
         disableSwitch: true,
@@ -214,7 +213,41 @@ const config = {
       },
     }),
 
-  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
+  plugins: [
+    "docusaurus-plugin-sass",
+    // Add custom webpack config to make @stoplight/elements work
+    () => ({
+      name: "custom-webpack-config",
+      configureWebpack: () => {
+        return {
+          module: {
+            rules: [
+              {
+                test: /\.m?js/,
+                resolve: {
+                  fullySpecified: false,
+                },
+              },
+            ],
+          },
+          plugins: [
+            new ProvidePlugin({
+              process: require.resolve("process/browser"),
+            }),
+          ],
+          resolve: {
+            fallback: {
+              buffer: require.resolve("buffer"),
+              stream: false,
+              path: false,
+              process: false,
+            },
+          },
+        };
+      },
+    }),
+    require.resolve("docusaurus-plugin-image-zoom"),
+  ],
 };
 
 module.exports = config;
